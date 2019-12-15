@@ -1,7 +1,9 @@
+package challenges
+
 import scala.io.Source
 import collection.mutable.ListBuffer
 
-object Challenge {
+object Palindrome {
 	def findPalindrome(names: List[String]): String = {
 		def palindrome(name: String): Boolean = {
 			val n = name.length

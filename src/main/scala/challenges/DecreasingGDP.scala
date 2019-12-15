@@ -1,6 +1,8 @@
+package challenges
+
 import scala.io.Source
 
-object Challenge {
+object DecreasingGDP {
 	/*def decreasingGDP(entries: List[Float]): Int = {
 		
 		def helper(entries: List[Float], counter: Int): Int = {			

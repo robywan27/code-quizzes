@@ -1,6 +1,8 @@
+package challenges
+
 import scala.io.Source
 
-object Challenge {
+object AddTheDigits {
 	def sumDigits(numbers: List[String]): Int = {
 		@annotation.tailrec
 		def helper(numbers: List[String], res: Int): Int =
