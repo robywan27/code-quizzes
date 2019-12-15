@@ -33,6 +33,13 @@ def romanToNumber(s: String): Int = {
       n
     }
     else {
+      // A better strategy would be to abstract away the search of the key to detangle the interaction between
+      // loop logic and recursion which may provide undesirable effects.
+      // The inverse of this problem handles this problem well by defining an MCD function which finds the right key
+
+      // Note that in this case this logic works because a StringBuilder has been used and at the end of the recursion
+      // the buffer is empty. If it was not, the loop would continue to cycle for those map entries after the matched 
+      // one which triggered the recursion and we would get a wrong result.      
       for (key <- romanMappingKeys)
         if (sb.indexOf(key) == 0)
           romanToNumberHelper(sb.delete(0, key.length), romanMapping(key) + n)
